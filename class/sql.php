@@ -14,7 +14,7 @@ class Sql extends PDO {
 
 		foreach ($parameters as $key => $value) {
 
-			$this -> setParam($key, $value);
+			$this -> setParam($statment, $key, $value);
 
 		}
 
@@ -45,7 +45,6 @@ class Sql extends PDO {
 		return $stmt -> fetchALL(PDO::FETCH_ASSOC);
 
 	}
-
 }
 
 ?>
